@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { useInterval } from 'usehooks-ts';
+import useInterval from '@hooks/useInterval';
 
 type Props = {
   messagePrefix: string;
