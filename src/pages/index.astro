@@ -1,0 +1,102 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Card from "@components/Card.astro";
+import ExperienceCard from "@components/ExperienceCard.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+import Hero from '@components/Hero.astro';
+import Footer from '@components/Footer.astro';
+import CompetitionCard from "@components/CompetitionCard.astro";
+---
+
+<Layout title="Alex Leska - Software Engineer">
+	<Hero />
+	<main>
+		<h1 id="experience"
+			class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-violet-600 mt-8 mb-8">
+			Experience</h1>
+		<ul role="list" class="link-card-grid max-w-5xl container mx-auto">
+			<ExperienceCard href="https://aws.amazon.com/glacier/" company="Amazon Web Services" team="S3 Glacier Durability"
+				role="Software Dev Engineer" date="Summer 2020 - Present" image="images/glacier.webp" icon="icons/aws.webp"
+				body="Built resiliant distributed services to ensure the durability and availability of customer data at the exabyte scale on S3 Glacier Deep Archive." />
+			<ExperienceCard href="https://developer-preview.smartthings.com/docs/automations/rules"
+				company="Samsung SmartThings" team="Rules & Behaviors" role="Software Engineer Intern"
+				date="Summer 2019 - Spring 2020" image="images/rulesapi.webp" icon="icons/smartthings.webp"
+				body="Worked with a global team of talented engineers to design and build APIs that drive automations on the Samsung SmartThings IoT Platform." />
+		</ul>
+		<h1 id="projects"
+			class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-violet-600 mt-8 mb-8">
+			Projects</h1>
+		<ul role="list" class="link-card-grid max-w-5xl container mx-auto">
+			<ProjectCard href="https://devpost.com/software/saga" name="Saga Learning" image="images/saga.webp"
+				body="Saga is an online learning management system that strives to improve the learning and teaching experience through gamification." />
+			<ProjectCard href="https://devpost.com/software/harpocrates" name="Harpocrates Bot"
+				image="images/harpocrates.webp"
+				body="Harpocrates (hɑrˈpɑkrəˌtiz), the Greek God of silence, secrets, and confidentiality, will help keep your discord server and members safe!" />
+		</ul>
+		<p
+			class="leading-relaxed max-w-5xl container mx-auto bg-gradient-to-r from-blue-700 to-violet-600 text-stone-50 p-4 mt-4 mb-4 rounded-lg">
+			This new version of my portfolio was built with <strong>React</strong>,
+			<strong>Tailwind</strong> and <strong>Astro</strong>! 🚀<br />
+			Check out what I'm currently building on my <a class="font-bold" href="https://github.com/leskaa/"
+				target="_blank">GitHub <span>&rarr;</span></a>
+		</p>
+		<ul role="list" class="link-card-grid max-w-5xl container mx-auto">
+			<ProjectCard href="https://github.com/leskaa/opentrack.tech" name="OpenTrack" image="images/opentrack.webp"
+				body="Full-stack application that allows users to create tracks of open-source educational materials. Built with Python, Typescript, Django, Angular 2+ and PostgreSQL. Lorem ipsum dolor sit amet labore et dolore magna aliqua." />
+			<ProjectCard href="https://drafthelper.netlify.com" name="Draft Helper" image="images/drafthelper.webp"
+				body="Web application that provides drafting recommendations for Dota 2 players from synergies, counters, and the professional meta. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore." />
+			<ProjectCard href="https://github.com/leskaa/internships-graphql-api" name="TechIntern.fyi"
+				image="images/placeholder.webp"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel pharetra vel turpis nunc eget. Blandit massa enim nec dui nunc mattis enim." />
+			<ProjectCard href="https://company-ranker.netlify.app" name="Matchup Ranker" image="images/matchupranker.webp"
+				body="Full-stack web application that allow users to view the public opinion of institutions through crowdsourced ranking. Users contribute by choosing between two random institutions in matchups." />
+			<ProjectCard href="https://leskaa.github.io/MazeGenerator" name="Maze Generator" image="images/mazegenerator.webp"
+				body="Responsive front-end web application visualizing the recursive backtracking algorithm. Built with p5.js and jQuery. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua." />
+			<ProjectCard href="https://github.com/leskaa/PowerUp" name="FRC Robot Code" image="images/placeholder.webp"
+				body="Created software for FRC Team 2606's robot and created a web based dashboard for drivers. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+			<ProjectCard href="https://leskaa.github.io/HolidayCard2017" name="Christmas Game"
+				image="images/christmasgame.webp"
+				body="Javascript game utilizing collision detection and basic physics. Built with the p5.js graphics library. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+			<ProjectCard href="https://github.com/leskaa/AsteroidDodgeGame" name="Asteroid Dodge Game"
+				image="images/placeholder.webp"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus laoreet non curabitur gravida arcu ac. Commodo ullamcorper a lacus vestibulum sed." />
+		</ul>
+		<h1 id="competitions"
+			class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-violet-600 mt-8 mb-8">
+			Coding Competitions</h1>
+		<ul role="list" class="link-card-grid max-w-5xl container mx-auto">
+			<CompetitionCard name="Liquid Hacks 2.0" place="Winner" award="Best EDU Hack" />
+			<CompetitionCard name="MinneHack 2022" place="Winner" award="Domain.com Award" />
+			<CompetitionCard name="2021 NDSU Byte-le Royale" place="1st Place" award="8 Teams" />
+			<CompetitionCard name="Digi-Key DKC3 2020" place="3rd Place" award="20 Teams" />
+			<CompetitionCard name="2020 NDSU Byte-le Royale" place="2nd Place" award="11 Teams" />
+			<CompetitionCard name="2020 UIUC R|P Mechmania" place="3rd Place" award="50 Teams" />
+			<CompetitionCard name="2019 NDSU Byte-le Royale" place="2nd Place" award="8 Teams" />
+			<CompetitionCard name="2019 UIUC R|P Mechmania" place="7th Place" award="17 Teams" />
+		</ul>
+	</main>
+	<footer>
+		<Footer />
+	</footer>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #1d4ed8, #7c3aed);
+		scroll-behavior: smooth;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 90%;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
+		justify-items: center;
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

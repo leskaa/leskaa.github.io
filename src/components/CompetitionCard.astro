@@ -1,0 +1,19 @@
+---
+export interface Props {
+  name: string;
+  place: string;
+  award: string;
+}
+const { name, place, award } = Astro.props;
+---
+
+<li class="w-full flex justify-center rounded-lg max-w-lg p-2 border-3 border-zinc-200">
+  <div class="rounded-md p-1">
+    <div class="flex justify-center">
+      <h2 class="text-xl font-bold m-0">{name}</h2>
+    </div>
+    <p class="text-center"><strong class="font-bold text-indigo-600">{place} -
+        {award}</strong>
+    </p>
+  </div>
+</li>

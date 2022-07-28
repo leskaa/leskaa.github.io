@@ -1,0 +1,76 @@
+---
+export interface Props {
+  company: string;
+  team: string;
+  role: string;
+  date: string;
+  image: string; // filepath
+  icon: string; // filepath
+  body: string;
+  href: string;
+}
+const { href, company, team, role, date, image, icon, body } = Astro.props;
+---
+
+<li class="flex p-3px rounded-lg link-card max-w-lg">
+  <a class="w-full rounded-md p-3" href={href}>
+    <div class="flex place-content-between">
+      <h2 class="text-lg font-bold text-left">{company}</h2>
+      <h2 class="text-lg font-bold text-right text-indigo-700">{team}</h2>
+    </div>
+    <img class="object-contain rounded-md mt-2 mb-3" src={image} />
+    <div class="flex m-2">
+      <img class="h-11 mr-2" src={icon} alt="Samsung SmartThings" />
+      <div class="">
+        <h2 class="text-xl font-bold">{role}</h2>
+        <h3 class="text-sm -mt-0.5">{date}</h3>
+      </div>
+    </div>
+    <p class="leading-snug">{body}</p>
+  </a>
+</li>
+<style>
+  :root {
+    --link-gradient: linear-gradient(45deg, #1d4ed8, #7c3aed 30%, var(--color-border) 60%);
+  }
+
+  .link-card {
+    background-image: var(--link-gradient);
+    background-size: 400%;
+    border-radius: 0.5rem;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link-card>a {
+    color: var(--text-color);
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  h2 {
+    margin: 0;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  h2 span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+  }
+
+  .link-card:is(:hover, :focus-within) h2 {
+    color: #3730a3;
+  }
+
+  .link-card:is(:hover, :focus-within) h3 {
+    color: #3730a3;
+  }
+
+  .link-card:is(:hover, :focus-within) h2 span {
+    transform: translateX(2px);
+  }
+</style>
