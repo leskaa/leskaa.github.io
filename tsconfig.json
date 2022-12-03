@@ -3,6 +3,11 @@
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
     "module": "ESNext",
+    // https://stackoverflow.com/questions/50432556/cannot-use-jsx-unless-the-jsx-flag-is-provided
+    "jsx": "react",
+    // https://stackoverflow.com/questions/60551025/how-can-i-get-rid-of-my-types-react-index-can-only-be-default-imported-using
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     // Enable node-style module resolution, for things like npm package imports.
     "moduleResolution": "node",
     // Enable JSON imports.

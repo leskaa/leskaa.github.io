@@ -11,23 +11,23 @@ type Props = {
 
 const Typewriter = ({ messagePrefix = '', messages, speed = 120, delay = 10 }: Props) => {
   const [letterIndex, setLetterIndex] = useState(0);
-  const [wordIndex, setWordIndex] = useState(1);
+  const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useInterval(
     () => {
       if (isDeleting) {
-        setLetterIndex((prevLetterIndex) => prevLetterIndex - 1);
+        setLetterIndex((prevLetterIndex: number) => prevLetterIndex - 1);
         if (letterIndex <= 0) {
           setIsDeleting(false);
           if (wordIndex < messages.length - 1) {
-            setWordIndex((prevWordIndex) => prevWordIndex + 1);
+            setWordIndex((prevWordIndex: number) => prevWordIndex + 1);
           } else {
             setWordIndex(0);
           }
         }
       } else {
-        setLetterIndex((prevLetterIndex) => prevLetterIndex + 1);
+        setLetterIndex((prevLetterIndex: number) => prevLetterIndex + 1);
         if (letterIndex >= messages[wordIndex].length + delay) {
           setIsDeleting(true);
         }
